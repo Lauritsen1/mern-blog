@@ -1,8 +1,11 @@
 const mongoose = require('mongoose');
 
-const Schema = mongoose.Schema;
-
-const postSchema = new Schema({
+const postSchema = mongoose.Schema({
+    user: {
+        type: mongoose.Schema.Types.ObjectId,
+        required: true,
+        ref: 'User'
+    },
     title: {
         type: String,
         required: true
