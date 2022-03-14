@@ -32,7 +32,7 @@ const setPost = asyncHandler(async (req, res) => {
     res.status(200).json(post);
 });
 
-// @desc    Update posts
+// @desc    Update post
 // @route   PUT /api/posts/:id
 // @access  Private
 const updatePost = asyncHandler(async (req, res) => {
@@ -60,7 +60,7 @@ const updatePost = asyncHandler(async (req, res) => {
     res.status(200).json(updatedPost);
 });
 
-// @desc    Delete posts
+// @desc    Delete post
 // @route   DELETE /api/posts/:id
 // @access  Private
 const deletePost = asyncHandler(async (req, res) => {
