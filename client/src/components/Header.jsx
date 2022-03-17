@@ -1,11 +1,16 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { useSelector } from 'react-redux';
 
 import logo from '../images/placeholder-logo.svg';
+
+import LogoutButton from './LogoutButton';
 
 function Header() {
 
     const [navActive, setNavActive] = useState(false);
+
+    const { user } = useSelector((state) => state.auth);
 
     const toggleNav = () => {
         if (navActive) {
@@ -56,12 +61,20 @@ function Header() {
                     </ul>
 
                     <div className='flex flex-col justify-center gap-6 border-t-2 border-gray-100 p-6 md:p-0 md:flex-row-reverse md:border-0'>
-                        <button className='text-white font-medium bg-indigo-600 hover:bg-indigo-700 rounded px-4 py-2 w-full md:w-max'><Link to='register'>Register</Link></button>
+                        {user ? (
+                            <LogoutButton />
+                        ) : (
+                            <>
+                                <button className='text-white font-medium bg-indigo-600 hover:bg-indigo-700 rounded px-4 py-2 w-full md:w-max'><Link to='register'>Register</Link></button>
 
-                        <div className='flex justify-center gap-1 md:items-center'>
-                            <p className='md:hidden'>Existing user?</p>
-                            <Link to='/login' className='text-indigo-600 font-medium md:text-black' onClick={() => setNavActive(false)}>Login</Link>
-                        </div>
+                                <div className='flex justify-center gap-1 md:items-center'>
+                                    <p className='md:hidden'>Existing user?</p>
+                                    <Link to='/login' className='text-indigo-600 font-medium md:text-black' onClick={() => setNavActive(false)}>Login</Link>
+                                </div>
+                            </>
+                        )}
+
+
                     </div>
                 </nav>
             </div>
