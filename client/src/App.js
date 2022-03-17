@@ -10,13 +10,15 @@ function App() {
 	return (
 		<>
 			<Router>
-				<Header />
-				<div className='container'>
-					<Routes>
-						<Route path='/' element={<Home />} />
-						<Route path='/login' element={<Login />} />
-						<Route path='/register' element={<Register />} />
-					</Routes>
+				<div>
+					< Header />
+					<div className='m-6'>
+						<Routes>
+							<Route path='/' element={<Home />} />
+							<Route path='/login' element={<Login />} />
+							<Route path='/register' element={<Register />} />
+						</Routes>
+					</div>
 				</div>
 			</Router>
 		</>

@@ -7,7 +7,7 @@ function Header() {
 
     const [navActive, setNavActive] = useState(false);
 
-    function toggleNav() {
+    const toggleNav = () => {
         if (navActive) {
             setNavActive(false);
         } else {
@@ -16,7 +16,7 @@ function Header() {
     }
 
     return (
-        <header className='relative px-6 lg:px-40'>
+        <header className='relative px-6'>
             <div className='flex justify-between items-center border-b-2 border-gray-100 py-6 md:justify-center'>
                 <div className='flex justify-between items-center w-full md:hidden'>
                     <img src={logo} alt='Logo' />
@@ -56,11 +56,11 @@ function Header() {
                     </ul>
 
                     <div className='flex flex-col justify-center gap-6 border-t-2 border-gray-100 p-6 md:p-0 md:flex-row-reverse md:border-0'>
-                        <button className='text-white font-medium bg-indigo-600 hover:bg-indigo-700 rounded px-4 py-2 w-full md:w-max'>Sign up</button>
+                        <button className='text-white font-medium bg-indigo-600 hover:bg-indigo-700 rounded px-4 py-2 w-full md:w-max'><Link to='register'>Register</Link></button>
 
                         <div className='flex justify-center gap-1 md:items-center'>
                             <p className='md:hidden'>Existing user?</p>
-                            <Link to='/register' className='text-indigo-600 font-medium md:text-black' onClick={() => setNavActive(false)}>Sign in</Link>
+                            <Link to='/login' className='text-indigo-600 font-medium md:text-black' onClick={() => setNavActive(false)}>Login</Link>
                         </div>
                     </div>
                 </nav>
