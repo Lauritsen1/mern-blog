@@ -2,7 +2,6 @@ import { useState, useEffect } from 'react';
 
 import { Link } from 'react-router-dom';
 import Button from '../components/Button';
-import logo from '../images/placeholder-logo.svg';
 
 function Login() {
 
@@ -28,7 +27,6 @@ function Login() {
         <div className='flex justify-center items-center'>
             <form className='flex flex-col gap-4 md:w-96' onSubmit={onSubmit}>
                 <div className='flex flex-col items-center gap-4'>
-                    {/* <img src={logo} alt='Logo' /> */}
                     <div className='text-center'>
                         <h1 className='font-bold text-2xl mb-2'>Login to your account</h1>
                         <p>Or <Link to='/register' className='text-indigo-600'>register here</Link></p>
