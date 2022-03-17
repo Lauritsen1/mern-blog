@@ -43,14 +43,12 @@ const updatePost = asyncHandler(async (req, res) => {
         throw new Error('Post not found');
     }
 
-    const user = await User.findById(req.user.id);
-
-    if (!user) {
+    if (!req.user) {
         res.status(401);
         throw new Error('User not found');
     }
 
-    if (post.user.toString() !== user.id) {
+    if (post.user.toString() !== req.user.id) {
         res.status(401);
         throw new Error('User not authorized');
     }
@@ -71,14 +69,12 @@ const deletePost = asyncHandler(async (req, res) => {
         throw new Error('Post not found');
     }
 
-    const user = await User.findById(req.user.id);
-
-    if (!user) {
+    if (!req.user) {
         res.status(401);
         throw new Error('User not found');
     }
 
-    if (post.user.toString() !== user.id) {
+    if (post.user.toString() !== req.user.id) {
         res.status(401);
         throw new Error('User not authorized');
     }
