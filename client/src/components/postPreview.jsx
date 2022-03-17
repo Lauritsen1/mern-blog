@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 
-function postPreview() {
+function PostPreview() {
     return (
         <div className='shadow-lg rounded-lg border flex flex-col justify-between p-6 aspect-4/3'>
 
@@ -29,4 +29,4 @@ function postPreview() {
     )
 }
 
-export default postPreview;
+export default PostPreview;
