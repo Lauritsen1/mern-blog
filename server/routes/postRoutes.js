@@ -3,6 +3,7 @@ const router = express.Router();
 
 const {
     getPosts,
+    getPost,
     setPost,
     updatePost,
     deletePost
@@ -11,6 +12,8 @@ const {
 const { private } = require('../middleware/authMiddleware');
 
 router.get('/', getPosts);
+
+router.get('/:id', getPost);
 
 router.post('/', private, setPost);
 

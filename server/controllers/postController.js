@@ -12,6 +12,20 @@ const getPosts = asyncHandler(async (req, res) => {
     res.status(200).json(posts);
 });
 
+// @desc    Get post
+// @route   GET /api/posts/:id
+// @access  Public
+const getPost = asyncHandler(async (req, res) => {
+    const post = await Post.findById(req.params.id);
+
+    if (!post) {
+        res.status(400);
+        throw new Error('Post not found');
+    }
+
+    res.status(200).json(post);
+});
+
 // @desc    Set post
 // @route   POST /api/posts
 // @access  Private
@@ -86,6 +100,7 @@ const deletePost = asyncHandler(async (req, res) => {
 
 module.exports = {
     getPosts,
+    getPost,
     setPost,
     updatePost,
     deletePost
