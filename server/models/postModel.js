@@ -10,9 +10,9 @@ const postSchema = mongoose.Schema({
         type: String,
         required: true
     },
-    snippet: {
+    subTitle: {
         type: String,
-        required: true
+        required: false
     },
     text: {
         type: String,

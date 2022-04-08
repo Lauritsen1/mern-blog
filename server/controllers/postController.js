@@ -38,7 +38,7 @@ const setPost = asyncHandler(async (req, res) => {
 
     const post = await Post.create({
         title: req.body.title,
-        snippet: req.body.snippet,
+        subTitle: req.body.subTitle,
         text: req.body.text,
         user: req.user.id
     })
