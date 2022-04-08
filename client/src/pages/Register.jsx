@@ -77,7 +77,7 @@ function Register() {
                 </div>
                 <div>
                     <input
-                        className='pl-4 w-full h-10 border border-t-0'
+                        className='pl-4 w-full h-10 border rounded-t-lg'
                         type='text'
                         id='username'
                         name='username'
@@ -86,7 +86,7 @@ function Register() {
                         onChange={onChange}
                     />
                     <input
-                        className='pl-4 w-full h-10 border rounded-t-lg'
+                        className='pl-4 w-full h-10 border border-t-0'
                         type='text'
                         id='email'
                         name='email'

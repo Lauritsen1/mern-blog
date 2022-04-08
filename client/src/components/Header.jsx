@@ -37,7 +37,8 @@ function Header() {
                     rounded-b-lg
                     shadow-lg
                     ring-1 ring-black ring-opacity-5
-                    transition duration-150 ease-in origin-top ${
+                    transition duration-150 ease-in origin-top 
+                    ${
                         !navActive
                             ? 'scale-y-0 opacity-0'
                             : 'scale-y-100 opacity-100'

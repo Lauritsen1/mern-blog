@@ -59,7 +59,7 @@ function UpdatePost() {
     };
 
     return (
-        <div className='lg:max-w-[65%] lg:m-auto'>
+        <div className='lg:max-w-[65%] lg:mx-auto my-6'>
             <button
                 className='text-white font-medium bg-blue-600 hover:bg-blue-500 rounded px-4 py-2 mb-6'
                 onClick={() => navigate('/dashboard')}>

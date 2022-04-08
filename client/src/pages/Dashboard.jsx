@@ -35,7 +35,7 @@ function Dashboard() {
     ));
 
     return (
-        <div className='lg:w-[65%] lg:mx-auto'>
+        <div className='lg:w-[65%] lg:mx-auto my-6'>
             <div className='flex items-center justify-between mb-6'>
                 <h1 className='text-4xl'>{user && user.username}</h1>
                 <Link

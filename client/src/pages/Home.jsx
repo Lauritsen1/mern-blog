@@ -27,7 +27,9 @@ function Home() {
         <PostPreview key={post._id} post={post} />
     ));
 
-    return <div className='grid gap-6 grid-cols-1'>{posts && postList}</div>;
+    return (
+        <div className='grid gap-6 grid-cols-1 m-6'>{posts && postList}</div>
+    );
 }
 
 export default Home;

@@ -16,9 +16,9 @@ function App() {
 	return (
 		<>
 			<Router>
-				<div>
+				<div className='grid grid-rows-[max-content,1fr] h-screen'>
 					< Header />
-					<div className='m-6'>
+					<div>
 						<Routes>
 							<Route path='/' element={<Home />} />
 							<Route path='/login' element={<Login />} />
