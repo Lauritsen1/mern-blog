@@ -1,0 +1,23 @@
+{
+    "name": "mern-blog",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "start": "cd server node app",
+        "build": "cd client && npm run build",
+        "install-client": "cd client && npm install",
+        "heroku-postbuild": "npm run install-client && npm run build"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Lauritsen1/mern-blog.git"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/Lauritsen1/mern-blog/issues"
+    },
+    "homepage": "https://github.com/Lauritsen1/mern-blog#readme"
+}
