@@ -3,7 +3,11 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "nodemon app"
+    "dev": "nodemon app",
+    "start": "node app",
+    "build": "cd ../client && npm run build",
+    "install-client": "cd ../client && npm install",
+    "heroku-postbuild": "npm run install-client && npm run build"
   },
   "dependencies": {
     "bcryptjs": "^2.4.3",
