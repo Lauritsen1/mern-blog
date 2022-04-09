@@ -13,6 +13,9 @@
         "install-client": "cd client && npm install",
         "heroku-postbuild": "npm run install-client && npm run build"
     },
+    "dependencies": {
+        "express": "~4.16.1"
+    },
     "repository": {
         "type": "git",
         "url": "git+https://github.com/Lauritsen1/mern-blog.git"
