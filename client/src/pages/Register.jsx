@@ -46,6 +46,26 @@ function Register() {
     const onSubmit = (e) => {
         e.preventDefault();
 
+        if (!username) {
+            toast.error('Please type your username');
+            return false;
+        }
+
+        if (!email) {
+            toast.error('Please type your email');
+            return false;
+        }
+
+        if (!password) {
+            toast.error('Please type your password');
+            return false;
+        }
+
+        if (!password2) {
+            toast.error('Please type your password');
+            return false;
+        }
+
         if (password !== password2) {
             toast.error('Passwords do not match');
         } else {
@@ -96,7 +116,7 @@ function Register() {
                     />
                     <input
                         className='pl-4 w-full h-10 border border-t-0'
-                        type='text'
+                        type='password'
                         id='password'
                         name='password'
                         value={password}
@@ -108,7 +128,7 @@ function Register() {
                         id='password2'
                         name='password2'
                         value={password2}
-                        type='text'
+                        type='password'
                         placeholder='Repeat password'
                         onChange={onChange}
                     />
