@@ -28,7 +28,7 @@ function Login() {
         }
 
         if (isSuccess || user) {
-            navigate('/');
+            navigate('/dashboard');
         }
 
         dispatch(reset());
@@ -43,6 +43,16 @@ function Login() {
 
     const onSubmit = (e) => {
         e.preventDefault();
+
+        if (!email) {
+            toast.error('Please type your email');
+            return false;
+        }
+
+        if (!password) {
+            toast.error('Please type your password');
+            return false;
+        }
 
         const userData = {
             email,
@@ -80,7 +90,7 @@ function Login() {
                     />
                     <input
                         className='pl-4 w-full h-10 border rounded-b-lg'
-                        type='text'
+                        type='password'
                         id='password'
                         name='password'
                         value={password}
