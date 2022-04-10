@@ -90,9 +90,11 @@ function Header() {
                             <LogoutButton />
                         ) : (
                             <>
-                                <button className='text-white font-medium bg-blue-600 hover:bg-blue-500 rounded px-4 py-2 w-full md:w-max'>
-                                    <Link to='register'>Register</Link>
-                                </button>
+                                <Link
+                                    className='text-white font-medium bg-blue-600 hover:bg-blue-500 rounded px-4 py-2 w-full md:w-max'
+                                    to='register'>
+                                    Register
+                                </Link>
 
                                 <div className='flex justify-center gap-1 md:items-center'>
                                     <p className='md:hidden'>Existing user?</p>
