@@ -8,11 +8,11 @@ function PostPreview({ post }) {
                     <span className='text-sm font-light text-gray-600'>
                         {new Date(post.createdAt).toLocaleDateString('da-DK')}
                     </span>
-                    <Link
+                    {/* <Link
                         to='/'
                         className='px-2 py-1 text-sm font-medium text-gray-100 transition-colors duration-200 transform bg-blue-600 hover:bg-blue-500 rounded cursor-pointer'>
                         Design
-                    </Link>
+                    </Link> */}
                 </div>
 
                 <div className='mt-2'>

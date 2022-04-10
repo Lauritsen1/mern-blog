@@ -65,14 +65,14 @@ function Header() {
                                 Home
                             </Link>
                         </li>
-                        <li className='font-medium p-2 hover:bg-slate-100'>
+                        {/* <li className='font-medium p-2 hover:bg-slate-100'>
                             <Link
                                 className='block'
                                 to='/'
                                 onClick={() => setNavActive(false)}>
                                 Categories
                             </Link>
-                        </li>
+                        </li> */}
                         {user && (
                             <li className='font-medium p-2 hover:bg-slate-100'>
                                 <Link
