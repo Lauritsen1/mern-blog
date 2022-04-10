@@ -27,13 +27,13 @@ function SinglePost() {
 
     return (
         <div className='lg:w-[65%] lg:mx-auto'>
-            <div className='mb-6'>
+            <div className='my-6'>
                 <h1 className='text-4xl font-bold text-gray-700 mb-1'>
                     {post.title}
                 </h1>
                 <div className='flex items-center gap-1'>
                     <span className='text-sm font-light text-gray-600'>
-                        Rasmus Lauritsen
+                        Username
                     </span>
                     <i className='bi bi-dot'></i>
                     <span className='text-sm font-light text-gray-600'>

@@ -31,7 +31,10 @@ function PostPreview({ post }) {
             </div>
 
             <div className='flex items-center justify-between mt-4'>
-                <Link to='/' href='#' className='text-blue-600 hover:underline'>
+                <Link
+                    to={`/post/${post._id}`}
+                    href='#'
+                    className='text-blue-600 hover:underline'>
                     Read more
                 </Link>
 
@@ -39,7 +42,7 @@ function PostPreview({ post }) {
                     <Link
                         to='/'
                         className='font-medium text-gray-700 cursor-pointer'>
-                        Rasmus Lauritsen
+                        Username
                     </Link>
                 </div>
             </div>
